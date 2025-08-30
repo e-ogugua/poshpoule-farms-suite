@@ -1,0 +1,16 @@
+{
+  "name": "@poshpoule/shared-components",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -w -p tsconfig.json"
+  },
+  "devDependencies": {
+    "svelte": "^4.2.18",
+    "typescript": "^5.4.0"
+  }
+}

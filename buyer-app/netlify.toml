@@ -1,0 +1,15 @@
+[build]
+# Install and build only this app from monorepo
+base = "apps/poshpoule/buyer-app"
+command = "npm run build"
+publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_CONFIG_PRODUCTION = "false"
+  NODE_ENV = "production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

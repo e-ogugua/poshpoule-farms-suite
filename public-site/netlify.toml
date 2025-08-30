@@ -1,0 +1,4 @@
+[build]
+base = "apps/poshpoule/public-site"
+command = "npm exec svelte-kit sync && npm exec svelte-kit build"
+publish = ".netlify"
