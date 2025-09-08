@@ -1,0 +1,21 @@
+{
+  "$schema": "https://vercel.com/schemas/v0.0.1/vercel.json",
+  "version": 2,
+  "public": true,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["fra1"],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "builds": [
+    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": ".next" } }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/_next/static/(.*)", "headers": { "cache-control": "public,max-age=31536000,immutable" } },
+    { "src": "/static/(.*)", "headers": { "cache-control": "public,max-age=31536000,immutable" } },
+    { "src": "/(.*)", "dest": "/" }
+  ]
+}
